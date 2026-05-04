@@ -11,7 +11,9 @@ from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTyp
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN не найден! Добавь переменную в Railway.")
 BEAT_PATH = Path(__file__).parent / "beat.mp3"
 VOICE_VOLUME = 1.0
 BEAT_VOLUME = 0.3
