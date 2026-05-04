@@ -1,3 +1,5 @@
 python-telegram-bot==21.6
 numpy
 soundfile
+ffmpeg-python
+static-ffmpeg
