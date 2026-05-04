@@ -2,6 +2,8 @@ import os
 import asyncio
 import logging
 import subprocess
+import static_ffmpeg
+static_ffmpeg.add_paths()
 from pathlib import Path
 import numpy as np
 import soundfile as sf
